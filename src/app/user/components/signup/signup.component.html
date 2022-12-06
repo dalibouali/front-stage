@@ -1,0 +1,208 @@
+<section class="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="contact-title">Créer votre Profil Etudiant</h2>
+      </div>
+      <div class="col-lg-8">
+        <form
+          #f="ngForm"
+          (ngSubmit)="addUser(f.value)"
+          class="form-contact contact_form"
+        >
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  ngModel
+                  name="email"
+                  id="email"
+                  type="email"
+                  onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = 'Entrer votre Email '"
+                  placeholder="Entrer votre Email"
+                />
+                <div class="alert" style="color: red" *ngIf="userexist">
+                  User exist in database try another email
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  ngModel
+                  name="firstName"
+                  id="firstname"
+                  type="text"
+                  onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = 'Entrer Votre Nom '"
+                  placeholder="Entrer votre Nom"
+                />
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  ngModel
+                  name="lastName"
+                  id="lastname"
+                  type="text"
+                  onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = 'Entrer Votre Prénom '"
+                  placeholder="Entrer votre Prénom"
+                />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  ngModel
+                  name="phone"
+                  id="phone"
+                  type="number"
+                  onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = 'Entrer Votre téléphone '"
+                  placeholder="Entrer votre téléphhone"
+                />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-group">
+                <label for="img">Photo</label>
+                <input
+                  class="form-control form-control-g"
+                  ngModel
+                  name="image"
+                  id="img"
+                  type="file"
+                  (change)="imageChange($event)"
+                />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-group">
+                <label for="dateob">Date de Naissance</label>
+                <input
+                  class="form-control"
+                  ngModel
+                  name="doB"
+                  id="dateob"
+                  type="date"
+                />
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <label for="cv">Votre CV</label>
+                <input
+                  class="form-control form-control-g"
+                  ngModel
+                  name="cv"
+                  id="cv"
+                  type="file"
+                  (change)="cvChange($event)"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="form-check">Gender</label>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    ngModel
+                    type="radio"
+                    name="gender"
+                    value="M"
+                    id="male"
+                    checked
+                  />
+                  <label class="form-check-label" for="male"> Homme </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    ngModel
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="F"
+                  />
+                  <label class="form-check-label" for="female"> Femme </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  ngModel
+                  name="password"
+                  id="password"
+                  type="password"
+                  onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = 'Entrer Votre Mot de pass '"
+                  placeholder="Entrer votre Mot de pass"
+                />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  ngModel
+                  name="address"
+                  id="adress"
+                  type="text"
+                  onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = 'Entrer Votre Adresse '"
+                  placeholder="Entrer votre Adresse"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <button type="submit" class="button button-contactForm boxed-btn">
+              S'inscrire
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-3 offset-lg-1">
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-home"></i></span>
+          <div class="media-body">
+            <h3>Buttonwood, California.</h3>
+            <p>Rosemead, CA 91770</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+          <div class="media-body">
+            <h3>+1 253 565 2365</h3>
+            <p>Mon to Fri 9am to 6pm</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-email"></i></span>
+          <div class="media-body">
+            <h3>support@colorlib.com</h3>
+            <p>Send us your query anytime!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

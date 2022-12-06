@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>TEST FILE UPOAD</title>
+  </head>
+  <body>
+    <h1>TEST FILE UPOAD</h1>
+    <p>TEST FILE UPOAD</p>
+    <label for="file">File Upload:</label>
+    <input type="file" name="file" id="file" />
+    <button onClick="uploadFile()">Upload</button>
+    <script>
+      function uploadFile() {
+        var file = document.getElementById("file").files[0];
+
+        var formData = new FormData();
+        formData.append("file", file);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:9090/api-user/cv/upload", true);
+        xhr.send(formData);
+        console.log("File uploaded");
+      }
+    </script>
+  </body>
+</html>

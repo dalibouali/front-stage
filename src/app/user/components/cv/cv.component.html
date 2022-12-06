@@ -1,0 +1,68 @@
+<div class="container">
+  <h1>Upload your CV here</h1>
+
+  <form
+    #f="ngForm"
+    (ngSubmit)="addcv(f.value)"
+    class="form-contact contact_form"
+  >
+    <!-- <label for="file">CV :</label>
+  <input ngModule type="file" ngModel name="file" id="file" /> -->
+    <div>
+      <label for="file"
+        >Upload your CV:<input
+          name="file"
+          type="file"
+          class="custom-file-input"
+          id="path"
+          (change)="fileChange($event)"
+        /><i class="bi bi-upload"></i>
+        <label class="custom-file-label">{{ fileInput }}</label></label
+      >
+    </div>
+
+    <button type="submit" class="button button-contactForm boxed-btn">
+      ADD CV
+    </button>
+  </form>
+</div>
+
+<!-- <div *ngIf="currentFile" class="progress">
+  <div
+    class="progress-bar progress-bar-info progress-bar-striped"
+    role="progressbar"
+    attr.aria-valuenow="{{ progress }}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    [ngStyle]="{ width: progress + '%' }"
+  >
+    {{ progress }}%
+  </div>
+</div>
+
+<label class="btn btn-default">
+  <input type="file" (change)="selectFile($event)" />
+</label>
+
+<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">
+  Upload
+</button>
+
+<div class="alert alert-light" role="alert">{{ message }}</div>
+
+<div class="card">
+  <div class="card-header">List of Files</div>
+  <ul
+    class="list-group list-group-flush"
+    *ngFor="let file of fileInfos | async"
+  >
+    <li class="list-group-item">
+      <a href="{{ file.url }}">{{ file.name }}</a>
+    </li>
+  </ul>
+</div> -->
+<!-- <h1>Upload and Download File</h1>
+<input type="file" id="customFile" (change)="selectFile($event)" />
+<button class="btn btn-primary" [disabled]="!selectedFiles" (click)="upload()">
+  Save File
+</button> -->

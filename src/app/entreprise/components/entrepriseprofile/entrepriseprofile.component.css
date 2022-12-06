@@ -1,0 +1,14 @@
+.bg-image{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .pdp-image {
+
+    position: relative;
+  top: 90%;
+  left: 10%;
+  width: 150px;
+  height: 120px;
+  
+  } 

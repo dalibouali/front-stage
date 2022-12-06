@@ -1,0 +1,51 @@
+<div class="col-8 offset-2">
+
+    <div *ngFor="let l of Applications " class="row justify-content-center">
+        <div class="col-12 ">
+            <!-- single-job-content -->
+            <div class="single-job-items mb-20" >
+                <div class="job-items" [routerLink]="['/user/dashboard/',l.user?.id]">
+                    <div class="company-img">
+                        <img src="{{l.user?.logUrl}}" alt="" class="rounded-circle img-fluid" style="width: 70px">
+
+                    </div>
+                    <div class="job-tittle">
+                        <span *ngIf="l.status=='ACCEPTED'" class="badge badge-success">ACCEPTED</span>
+                                            <span *ngIf="l.status=='REJECTED'" class="badge badge-danger">REJECTED</span>
+                                            <span *ngIf="l.status=='PENDING'" class="badge badge-warning">PENDING</span>
+                        <h2>{{l.user?.firstName}} {{l.user?.lastName}}</h2>
+
+                        <ul>
+                            <h2>{{l.user?.profile}}</h2>
+                            <br>
+                            <li><i class="fas fa-map-marker-alt"></i>Tunis, Tunisia</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="items-link f-right">
+                    <div>
+                        <b>{{l.user?.university}}</b>
+                        <div style="margin-top: 20%;" (click)="rejectApplication(l.id)">
+                            <a><i style="color:red; " class="fa fa-trash"></i></a>
+
+                        </div>
+                        <div style="margin-top: 20%;" (click)="acceptApplication(l.id)">
+                            <a><i style="color:green; " class="fa fa-edit" ></i></a>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,96 @@
+<!-- job post company Start -->
+<div >
+    <div class="container">
+        <div class="row justify-content-between">
+            <!-- Left Content -->
+            <div class="col-xl-7 col-lg-8">
+                <!-- job single -->
+                <div class="single-job-items mb-50">
+                    <div class="job-items">
+                        <div class="company-img company-img-details">
+                            <a ><img src="{{Entreprise?.enrepriselogo}}" alt="" class="rounded-circle img-fluid" style="width: 90px"></a>
+                        </div>
+                        <div class="job-tittle">
+                            <a href="#">
+                                <h4>{{Entreprise?.name}}</h4>
+                            </a>
+                            <ul>
+                                <li>{{Entreprise?.email}}</li>
+                                <li><i class="fas fa-map-marker-alt"></i>Tunis, Tunisia</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- job single End -->
+
+                <div class="job-post-details">
+                    <div class="post-details1 mb-50">
+                        <!-- Small Section Tittle -->
+                        <div class="small-section-tittle">
+                            <h4>Internship Description</h4>
+                        </div>
+                        <p>{{offer?.subject}}</p>
+                    </div>
+                    <div class="post-details2  mb-50">
+                        <!-- Small Section Tittle -->
+                        <div class="small-section-tittle">
+                            <h4>Required Knowledge, Skills, and Abilities</h4>
+                        </div>
+                        <ul *ngFor="let l of offer?.skills">
+                            <li>{{l}}</li>
+                    
+                        </ul>
+                    </div>
+                    <div class="post-details2  mb-50">
+                        <!-- Small Section Tittle -->
+                        <div class="small-section-tittle">
+                            <h4>Education + Experience</h4>
+                        </div>
+                        <ul>
+                            <li>3 or more years of professional design experience</li>
+                            <li>Direct response email experience</li>
+                            <li>Ecommerce website design experience</li>
+                            <li>Familiarity with mobile and web apps preferred</li>
+                            <li>Experience using Invision a plus</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Right Content -->
+            <div class="col-xl-4 col-lg-4">
+                <div class="post-details3  mb-50">
+                    <!-- Small Section Tittle -->
+                    <div class="small-section-tittle">
+                        <h4>Job Overview</h4>
+                    </div>
+                    <ul>
+                        <li>Begining Date : <span>{{offer?.begin_date}}</span></li>
+                        <li>Location : <span>New York</span></li>
+                        <li>Vacancy : <span>02</span></li>
+                        <li>Internship nature : <span>{{offer?.type}}</span></li>
+                        <li>Ending Date  : <span>{{offer?.end_date}}</span></li>
+                    </ul>
+                    <div class="apply-btn2">
+                        <a (click)="makerequest(offer?.id)" class="btn">Apply Now</a>
+                    </div>
+                </div>
+                <div class="post-details4  mb-50">
+                    <!-- Small Section Tittle -->
+                    <div class="small-section-tittle">
+                        <h4>Company Information</h4>
+                    </div>
+                    <span>{{Entreprise?.name}}</span>
+                    <p>{{Entreprise?.description}}</p>
+                    <ul>
+                        <li>Name: <span>{{Entreprise?.name}} </span></li>
+                        <li>Web : <span> colorlib.com</span></li>
+                        <li>Email: <span>{{Entreprise?.email}}</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- job post company End -->

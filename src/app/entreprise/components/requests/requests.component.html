@@ -1,0 +1,67 @@
+<section style="padding: 50px;">
+    <div class="container">
+        <div *ngFor="let request of listRequest " class="row justify-content-center">
+            <div class="col-xl-10">
+                <!-- single-job-content -->
+                <div class="single-job-items mb-30" >
+                    <div class="job-items" [routerLink]="['/user/dashboard',request.user?.id]">
+                        <div class="company-img">
+                            <a href="job_details.html"><img src="{{request.user?.ImageUrl}}"
+                                    class="rounded-circle" style="width: 150px;" alt="Avatar"></a>
+
+                        </div>
+                        <div class="job-tittle">
+                            
+                            <span *ngIf="!request?.status" class="badge badge-warning">Pending</span>
+                            <span *ngIf="request?.status" class="badge badge-success">Accepted</span>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">{{request.user?.firstName}} {{request.user?.lastName}} </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <br>
+                                    <tr>
+                                        {{request.user?.email}}
+                                    </tr>
+                                    <tr>
+                                        +216 <i class="bi bi-telephone"> {{request.user?.phone}} </i>
+
+                                    </tr>
+                                    <tr>
+                                        <i class="bi bi-calendar-date"> {{request.user?.doB|date}} </i>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <ul>
+                                <br>
+                                <li><i class="fas fa-map-marker-alt"></i>{{request.user?.address}},Tunisia</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="items-link f-right">
+                        <a href="job_details.html">{{request.offer.type}}</a>
+                        <span>applayed at {{request.date|date}}</span>
+                        <div style="margin-top: 20%;">
+                            <a (click)="deleteRequest(request.id)"><i style="color:red; " class="fa fa-trash"></i></a>
+                            <a (click)="confimRequest(request.id)"><i style="color:green; " class="fa fa-edit"></i></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</section>

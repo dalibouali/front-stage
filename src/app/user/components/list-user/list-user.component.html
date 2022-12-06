@@ -1,0 +1,42 @@
+<section style="padding: 50px;">
+    <div class="container">
+
+
+        <div *ngFor="let l of ListUser" class="row justify-content-center">
+            <div class="col-xl-10" [routerLink]="['/user/dashboard',l?.id]">
+                <!-- single-job-content -->
+                <div class="single-job-items mb-30">
+                    <div class="job-items">
+                        <div class="company-img">
+                            <a href="job_details.html"><img src="{{ l.ImageUrl }}" class="rounded-circle"
+                                    style="width: 150px; height: 150px;" alt="Avatar"></a>
+                        </div>
+                        <div class="job-tittle">
+                            <a href="job_details.html">
+                                <h2> {{l.firstName}} {{l.lastName}}</h2>
+                            </a>
+                            <h3>{{l.intro}}</h3>
+
+
+                            <p>{{l.email}}</p>
+                            <span>{{l.phone}}</span>
+
+
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i>{{l.address}},Tunisie</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="items-link f-right">
+                        <a href="job_details.html">TEK-UP</a>
+                        
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>

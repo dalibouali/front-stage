@@ -1,0 +1,95 @@
+<div>
+    <div class="container">
+        <div class="row">
+            <!-- Left content -->
+            
+            <div>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Checked switch -->
+
+                        <div class="small-section-tittle2 mb-45">
+                            <div class="ion"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="12px">
+                                    <path fill-rule="evenodd" fill="rgb(27, 207, 107)"
+                                        d="M7.778,12.000 L12.222,12.000 L12.222,10.000 L7.778,10.000 L7.778,12.000 ZM-0.000,-0.000 L-0.000,2.000 L20.000,2.000 L20.000,-0.000 L-0.000,-0.000 ZM3.333,7.000 L16.667,7.000 L16.667,5.000 L3.333,5.000 L3.333,7.000 Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h4>Search using any keyword</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Job Category Listing start -->
+                <div class="job-category-listing mb-50">
+                    <!-- single one -->
+                    <div class="single-listing">
+                        <div class="small-section-tittle2">
+                            <h4>Search</h4>
+                        </div>
+                        <div class="search-hero">
+                            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="search by
+                                entreprise name or tehchnology">
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+                <!-- Job Category Listing End -->
+            </div>
+            <!-- Right content -->
+            <div class="col-xl-9 col-lg-9 col-md-8">
+                
+                <!-- Featured_job_start -->
+                <section class="featured-job-area">
+                    <div class="container">
+                        
+
+                        <!-- single-job-content -->
+                        <div *ngFor="let l of ListOffers|filter:searchText " class="single-job-items mb-30"
+                            (click)="getOffersdetails(l.id)">
+                            <div class="job-items">
+                                <div class="job-tittle job-tittle2">
+                                    <div class="company-img">
+                                        <img src="{{l.enrepriselogo}}" alt="" class="rounded-circle img-fluid"
+                                            style="width: 70px">
+                                        <div>
+                                            <h2>{{l?.title}}</h2>
+                                        </div>
+                                        <span *ngIf="l.remote" class="badge badge-success">Remote</span>
+                                        <span *ngIf="!l.remote" class="badge badge-danger">On site</span>
+                                        <div class="items-link items-link2 f-right">
+                                            <a href="job_details.html">{{l.type}}</a>
+                                        </div>
+                                    </div>
+
+
+                                    <ul>
+
+                                        <li><i class="fas fa-map-marker-alt"></i>Tunis, Tunisia</li>
+                                    </ul>
+                                    <br>
+                                    <p style="margin: none;">{{l.subject}}</p>
+                                </div>
+                            </div>
+                            <div>
+
+                                <p>
+                                    <b *ngFor="let tech of l.technologies" class="badge">{{tech}}</b>
+
+
+                                </p>
+                                <span>from {{l.begin_date}} to {{l.end_date}}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- Featured_job_end -->
+            </div>
+        </div>
+    </div>
+</div>

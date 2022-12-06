@@ -1,0 +1,53 @@
+<section class="featured-job-area">
+    <div class="container">
+<!-- Search Box -->
+<div class="row">
+    <div class="col-xl-6 offset-3">
+        <!-- form -->
+        <div  class="search-box">
+            <div class="input-form">
+                <input class="form-control" type="text" placeholder="User keyword for Search or enter company name" [(ngModel)]="SearchByName">
+            </div> 
+                   
+        </div>
+    </div>
+</div>
+        <!-- single-job-content -->
+        <div *ngFor="let l of ListEntreprises|filter:SearchByName " class="single-job-items mb-30">
+            <div class="job-items" [routerLink]="['/entreprisedetails',l.id]">
+                <div class="company-img">
+                    <a><img src="{{l.logoUrl}}" alt="entreprise Logo" class="rounded-circle img-fluid"
+                            style="width: 70px"></a>
+                </div>
+                <div class="job-tittle job-tittle2">
+                    <a>
+                        <h4>{{l?.name}}</h4>
+                    </a>
+
+                    <ul>
+
+                        <li><i class="fas fa-map-marker-alt"></i>Tunis, Tunisia</li>
+
+
+                    </ul>
+                    <p>
+                        <b class="badge">{{l?.email}}</b>
+
+
+                    </p>
+                    <p style="margin: 20;">{{l?.description |slice : 0:110}} ...</p>
+
+
+
+
+
+                </div>
+            </div>
+            <div class="items-link items-link2 f-right">
+                <a href="job_details.html">{{l.status}}</a>
+
+            </div>
+        </div>
+
+    </div>
+</section>

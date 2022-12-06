@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-8 col-offset-2">
+      <h1>Upload Your Cv Here and check the Result</h1>
+
+    </div>
+
+  </div>
+</div>
+<div class=" h-75">
+  <ngx-extended-pdf-viewer src="{{cv}}" [height]="'100%'" [useBrowserLocale]="true" [showHandToolButton]="true">
+  </ngx-extended-pdf-viewer>
+</div>
+<!-- <div class="card text-center">
+  <div class="card-header">
+    Hello {{resume?.name}}
+  </div>
+  <div class="card-body">
+    <li>Email :<i class="bi bi-envelope"> {{resume?.email}}</i> </li>
+    <li>Contact :<i class="bi bi-telephone">{{resume?.Contact}} </i> </li>
+
+    <p class="card-text">You Look {{resume?.cand_level}}</p>
+  </div>
+  <h2>Your Skills</h2>
+  <div style="display:inline-block ;" *ngFor="let i of resume.skills">
+    <p >
+      {{i}}
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div> -->

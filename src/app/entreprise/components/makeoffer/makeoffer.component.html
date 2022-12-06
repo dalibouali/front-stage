@@ -1,0 +1,107 @@
+<section class="d-flex justify-content-center">
+    <div class="container ">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="contact-title">Add a new Offer</h2>
+            </div>
+            <div class="col-lg-8">
+                <form #f="ngForm" (ngSubmit)="makeoffer(f.value)" class="form-contact contact_form">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input class="form-control" ngModel name="title" id="title" type="text" 
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Choose a title for your offer  '"
+                                    placeholder="Choose a title for your offer ">
+
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input class="form-control" ngModel name="subject" id="subject" type="text" 
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter a subject  '"
+                                    placeholder="Entrer a subject">
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-12" >
+                             <!--Using ng-option and for loop-->
+                             <label for="technologies">Choose technologies here</label>
+                             <div  class="input-group-prepend">
+                                <ng-select ngModel name="technologies" class="form-control input-sm " [multiple]="true"  >
+                                    <ng-option *ngFor="let l of ListTechnologies" [value]="l" style="color: bleu;">{{l}}</ng-option>
+                                </ng-select>
+                             </div>
+                       
+
+                        </div>
+
+                        <div class="col-12" >
+                            <!--Using ng-option and for loop-->
+                            <label for="skills">Choose Recommanded Skills here</label>
+                            <div  class="input-group-prepend">
+                               <ng-select ngModel name="skills" class="form-control input-sm " [multiple]="true"  [addTag]="true" [items]="CustomTags">
+                                   
+                               </ng-select>
+                            </div>
+                      
+
+                       </div>
+
+
+
+
+
+
+
+
+                        <div class="col-12">
+
+                            <div class="form-group">
+                                <label for="dateob">Date de debut</label>
+                                <input class="form-control" ngModel name="begin_date" id="dbegin_date" type="date">
+                            </div>
+                        </div>
+                        <div class="col-12">
+
+                            <div class="form-group">
+                                <label for="dateob">Date de Fin</label>
+                                <input class="form-control" ngModel name="end_date" id="end_date" type="date">
+                            </div>
+                        </div>
+
+                       
+
+                      
+
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="form-check">Type de stage</label>
+                                <div class=" form-check">
+                                    <input class="form-check-input" ngModel type="radio" name="type" value="pfe"
+                                        id="pfe" checked>
+                                    <label class="form-check-label" for="pfe">
+                                        Stage PFE
+                                    </label>
+                                </div>
+                                <div class="form-check ">
+                                    <input class="form-check-input " ngModel type="radio" name="type" id="été"
+                                        value="été">
+                                    <label class="form-check-label" for="été">
+                                        Stage d'été
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="button button-contactForm boxed-btn">Save</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

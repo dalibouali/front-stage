@@ -1,0 +1,117 @@
+<div class="bg-image" style="background-image: url('assets/img/cover.jpg');
+            height: 50vh">
+    <div class="pdp-image"><img src="assets/img/pdp/sofrecom.png" class="rounded-circle img-fluid">
+        <i class="bi bi-camera"></i>
+    </div>
+</div>
+
+
+
+<div class="container" style="margin-top: 100px;">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="contact-title">Modify Informations About Your Company</h2>
+            <i class="bi bi-camera"></i>
+            
+        </div>
+        <div class="col-lg-8">
+            <form #f="ngForm" class="form-contact contact_form" method="post" id="contactForm" novalidate="novalidate">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <input class="form-control" name="email" id="email" type="email" ngModel
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrer votre Email '"
+                                placeholder="Entrer votre Email">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            <input class="form-control" name="name" id="name" type="text" ngModel
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrer le Nom de societé'"
+                                placeholder="Entrer votre  de societé">
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            <textarea class="form-control w-100" name="description" id="description" cols="30" ngModel
+                                rows="9" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = 'Entrer la description'"
+                                placeholder="Entrer la description"></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Type d'entreprise</label>
+                            <select class="form-select nice-select" id='typeen' aria-label="Default select example"
+                                name="status" ngModel>
+
+                                <option value="1">Entreprise</option>
+                                <option value="2">Startup</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+
+                        <div class="form-group">
+                            <label for="img">Logo</label>
+                            <input class="form-control form-control-g" name="logo" id="img" type="file" ngModel>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            <input class="form-control" name="password" id="password" type="password" ngModel
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrer Votre Mot de pass '"
+                                placeholder="Entrer votre Mot de pass">
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="form-group mt-3">
+                    <button type="submit" class="button button-contactForm boxed-btn">S'inscrire</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-3 offset-lg-1">
+            <div class="media contact-info">
+                <span class="contact-info__icon"><i class="ti-home"></i></span>
+                <div class="media-body">
+                    <h3>Buttonwood, California.</h3>
+                    <p>Rosemead, CA 91770</p>
+                </div>
+            </div>
+            <div class="media contact-info">
+                <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                <div class="media-body">
+                    <h3>+1 253 565 2365</h3>
+                    <p>Mon to Fri 9am to 6pm</p>
+                </div>
+            </div>
+            <div class="media contact-info">
+                <span class="contact-info__icon"><i class="ti-email"></i></span>
+                <div class="media-body">
+                    <h3>support@colorlib.com</h3>
+                    <p>Send us your query anytime!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
