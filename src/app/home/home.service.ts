@@ -9,6 +9,6 @@ export class HomeService {
 
   constructor(private http:HttpClient) { }
   getOffers():Observable<any>{
-    return this.http.get('http://127.0.0.1:8000/Offers/');
+    return this.http.get('http://18.208.236.138:8000/Offers/');
   }
 }

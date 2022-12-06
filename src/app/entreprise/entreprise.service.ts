@@ -10,12 +10,12 @@ export class EntrepriseService {
   constructor(private http: HttpClient) { }
 
   getUserByEmail(email: string): Observable<any> {
-    return this.http.get('http://localhost:8081/api-entreprise/get-entreprise/' + email);
+    return this.http.get('http://18.208.236.138:8081/api-entreprise/get-entreprise/' + email);
   }
   getEntrepriseById(id:number):Observable<any>{
-    return this.http.get('http://localhost:8081/api-entreprise/get-entreprise-by-id/' + id);
+    return this.http.get('http://18.208.236.138:8081/api-entreprise/get-entreprise-by-id/' + id);
   }
   getEntrepriseByIdAsUser(id:number):Observable<any>{
-    return this.http.get('http://localhost:9090/api-user/getEntreprise/' + id);
+    return this.http.get('http://18.208.236.138:9090/api-user/getEntreprise/' + id);
   }
 }

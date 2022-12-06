@@ -12,56 +12,56 @@ export class OfferService {
 
 
   makeOffer(form: any): Observable<any> {
-    return this.http.post('http://localhost:8081/api-entreprise/makeoffer', form)
+    return this.http.post('http://18.208.236.138:8081/api-entreprise/makeoffer', form)
 
   }
   updateOffer(id:number,form: any): Observable<any> {
-    return this.http.put('http://localhost:8081/api-entreprise/updateOffer/'+id, form)
+    return this.http.put('http://18.208.236.138:8081/api-entreprise/updateOffer/'+id, form)
 
   }
   getOffers(): Observable<any> {
 
-    return this.http.get('http://localhost:8081/api-entreprise/offers')
+    return this.http.get('http://18.208.236.138:8081/api-entreprise/offers')
 
   }
   getOfferByID(id: number): Observable<any> {
 
-    return this.http.get('http://localhost:8081/api-entreprise/offer/' + id)
+    return this.http.get('http://18.208.236.138:8081/api-entreprise/offer/' + id)
 
   }
   getrequestPerOffer(id:number): Observable<any> {
 
-    return this.http.get('http://localhost:8081/api-entreprise/getRequestByOffer/' + id)
+    return this.http.get('http://18.208.236.138:8081/api-entreprise/getRequestByOffer/' + id)
 
   }
 
   getUser(id: any): Observable<any> {
-    return this.http.get('http://localhost:9090/api-user/get/' + id);
+    return this.http.get('http://18.208.236.138:9090/api-user/get/' + id);
   }
 
   deleteOffer(id:number):Observable<any>
   {
-    return this.http.delete('http://localhost:9099/offers/deletoffer/'+id)
+    return this.http.delete('http://18.208.236.138:9099/offers/deletoffer/'+id)
   }
   confirmOffer(id:number):Observable<any>
   {
-    return this.http.put('http://localhost:9099/request/confirm/'+id,null)
+    return this.http.put('http://18.208.236.138:9099/request/confirm/'+id,null)
   }
   getRequestByUserAndOffer(iduser:number,idoffer:number):Observable<any>
   {
-    return this.http.get('http://localhost:9099/request/getRequestByuserAndOffer/'+iduser+'/'+idoffer)
+    return this.http.get('http://18.208.236.138:9099/request/getRequestByuserAndOffer/'+iduser+'/'+idoffer)
   }
   deleteRequest(id:number):Observable<any>
   {
-    return this.http.delete('http://localhost:9099/request/delete/'+id)
+    return this.http.delete('http://18.208.236.138:9099/request/delete/'+id)
   }
   getOfferByEntrepriseId(id:number):Observable<any>
   {
-    return this.http.get('http://localhost:9099/offers/entrepriseoffer/'+id);
+    return this.http.get('http://18.208.236.138:9099/offers/entrepriseoffer/'+id);
   }
 
   directapplication(identreprise:number,iduser:number):Observable<any>
   {
-    return this.http.post('http://localhost:9099/spontaneousapplications/apply/enterprise/'+identreprise+'/'+iduser,null)
+    return this.http.post('http://18.208.236.138:9099/spontaneousapplications/apply/enterprise/'+identreprise+'/'+iduser,null)
   }
 }

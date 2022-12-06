@@ -13,41 +13,41 @@ export class UserService {
 
   addUser(form: any): Observable<any> {
 
-    return this.http.post('http://localhost:9090/api-user/add/user', form)
+    return this.http.post('http://18.208.236.138:9090/api-user/add/user', form)
 
   }
   addEntreprise(form: any): Observable<any> {
 
-    return this.http.post('http://localhost:8081/api-entreprise/addEntreprise', form)
+    return this.http.post('http://18.208.236.138:8081/api-entreprise/addEntreprise', form)
 
   }
 
   allUsers(): Observable<any> {
-    return this.http.get("http://localhost:9090/api-user/all")
+    return this.http.get("http://18.208.236.138:9090/api-user/all")
   }
 
 
 
 
   addCv(form: any): Observable<any> {
-    return this.http.post('http://localhost:9090/api-user/cv/upload', form);
+    return this.http.post('http://18.208.236.138:9090/api-user/cv/upload', form);
   }
 
 
 
   getUser(id: any): Observable<any> {
-    return this.http.get('http://localhost:9090/api-user/get/' + id);
+    return this.http.get('http://18.208.236.138:9090/api-user/get/' + id);
   }
   updateUser(form: any, id: any): Observable<any> {
     return this.http.put(
-      'http://localhost:9090/api-user/update/' + id,
+      'http://18.208.236.138:9090/api-user/update/' + id,
 
       form
     );
   }
 
   getUserByEmail(email: string): Observable<any> {
-    return this.http.get('http://localhost:9090/api-user/get-user/' + email);
+    return this.http.get('http://18.208.236.138:9090/api-user/get-user/' + email);
   }
 
 
@@ -60,24 +60,24 @@ export class UserService {
   }
 
   getuserApplications(id: number): Observable<any> {
-    return this.http.get('http://localhost:9099/spontaneousapplications/userapplications/' + id)
+    return this.http.get('http://18.208.236.138:9099/spontaneousapplications/userapplications/' + id)
   }
   deleteApplication(id: number): Observable<any> {
-    return this.http.delete('http://localhost:9099/spontaneousapplications/deleteapplication/' + id)
+    return this.http.delete('http://18.208.236.138:9099/spontaneousapplications/deleteapplication/' + id)
   }
   getMyProfile(id: number): Observable<any> {
-    return this.http.get('http://localhost:9090/api-user/getUserProfile/' + id)
+    return this.http.get('http://18.208.236.138:9090/api-user/getUserProfile/' + id)
   }
   getSemilarProfile(profile: string): Observable<any> {
     return this.http.get('http://127.0.0.1:8000/recom/' + profile)
   }
   getEntrepriseApplications(id: number): Observable<any> {
-    return this.http.get('http://localhost:9099/spontaneousapplications/entrepriseapplications/' + id)
+    return this.http.get('http://18.208.236.138:9099/spontaneousapplications/entrepriseapplications/' + id)
   }
   rejectApplication(id:number):Observable<any>{
-    return this.http.put('http://localhost:9099/spontaneousapplications/rejectapplication/' + id,null)
+    return this.http.put('http://18.208.236.138:9099/spontaneousapplications/rejectapplication/' + id,null)
   }
   acceptApplication(id:number):Observable<any>{
-    return this.http.put('http://localhost:9099/spontaneousapplications/accesptapplication/' + id,null)
+    return this.http.put('http://18.208.236.138:9099/spontaneousapplications/accesptapplication/' + id,null)
   }
 }

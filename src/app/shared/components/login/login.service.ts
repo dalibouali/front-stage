@@ -9,6 +9,6 @@ export class LoginService {
   constructor(private http: HttpClient) {}
 
   login(form: any): Observable<any> {
-    return this.http.post('http://localhost:9004/auth/login', form);
+    return this.http.post('http://18.208.236.138:9004/auth/login', form);
   }
 }

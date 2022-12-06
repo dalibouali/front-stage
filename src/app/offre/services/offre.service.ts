@@ -14,42 +14,42 @@ export class OffreService {
   getoffers():Observable<any>
   {
 
-   return this.http.get('http://localhost:9099/offers/alloffers')
+   return this.http.get('http://18.208.236.138:9099/offers/alloffers')
 
   }
   getofferById(id:number):Observable<any>
   {
 
-   return this.http.get('http://localhost:9099/offers/offer/'+id)
+   return this.http.get('http://18.208.236.138:9099/offers/offer/'+id)
 
   }
   getEntrepriseById(id:number):Observable<any>
   {
 
-   return this.http.get('http://localhost:9090/api-user/getEntreprise/'+id)
+   return this.http.get('http://18.208.236.138:9090/api-user/getEntreprise/'+id)
 
   }
   getEntrepriseByIdAsUser(id:number):Observable<any>
   {
 
-   return this.http.get('http://localhost:9090/api-user/getEntreprise/'+id)
+   return this.http.get('http://18.208.236.138:9090/api-user/getEntreprise/'+id)
 
   }
   getEntreprises():Observable<any>
   {
 
-   return this.http.get('http://localhost:9090/api-user/getEntreprises')
+   return this.http.get('http://18.208.236.138:9090/api-user/getEntreprises')
 
   }
   makerequest(offerid:number,userid:number):Observable<any>
   {
-    return  this.http.post('http://localhost:9090/api-user/makerequest/'+offerid+'/'+userid,null)
+    return  this.http.post('http://18.208.236.138:9090/api-user/makerequest/'+offerid+'/'+userid,null)
 
   }
 
   getCurrentuser(username:string):Observable<any>
   {
-    return this.http.get('http://localhost:9090/api-user/get-user/'+username);
+    return this.http.get('http://18.208.236.138:9090/api-user/get-user/'+username);
   }
   
 
